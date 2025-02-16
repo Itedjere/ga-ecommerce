@@ -32,14 +32,9 @@ export default function Home() {
             />
             Deploy now
           </Link>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+          <Link href="/" className={styles.secondary}>
+            Contact Us Page
+          </Link>
         </div>
       </main>
       <footer className={styles.footer}>

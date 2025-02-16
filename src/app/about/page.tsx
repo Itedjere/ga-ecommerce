@@ -3,8 +3,9 @@ import Image from "next/image";
 import styles from "../page.module.css";
 import { useEffect } from "react";
 import { sendGAEvent } from "@next/third-parties/google";
+import Link from "next/link";
 
-export default function Home() {
+export default function About() {
   useEffect(() => {
     sendGAEvent("event", "view_item_list", {
       item_list_id: "related_products",
@@ -291,12 +292,7 @@ export default function Home() {
         </ol>
 
         <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <Link className={styles.primary} href="/about">
             <Image
               className={styles.logo}
               src="/vercel.svg"
@@ -304,16 +300,11 @@ export default function Home() {
               width={20}
               height={20}
             />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+            About Page
+          </Link>
+          <Link href="/contact-us" className={styles.secondary}>
+            Contact Us Page
+          </Link>
         </div>
       </main>
       <footer className={styles.footer}>
